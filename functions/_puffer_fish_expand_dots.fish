@@ -4,6 +4,7 @@ function _puffer_fish_expand_dots -d 'expand ... to ../.. etc'
     switch $split[-1]
         case './*'; commandline --insert '.'
         case '*..'; commandline --insert '/..'
-        case '*'; commandline --insert '.'
+        case '~'  ; commandline --insert '/.'
+        case '*'  ; commandline --insert '.'
     end
 end
